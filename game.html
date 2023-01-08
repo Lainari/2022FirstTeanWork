@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game</title>
+        <meta charset="UTF-8"> <!--글자를 UTF-8 버전으로 인코딩, 글자 깨짐 방지-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--브라우저 너비를 장치 너비에 맞추어 표시함-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--최신모드로 지정된 DOCTYPE에 상관없이 IE8 이상 버전에서 항상 최신 표준 모드로 렌더링화-->
+        <link rel="stylesheet" href="Main_style.css">
+        <!--css를 링크로 통한 연결-->
+        <style>
+            .game_container{
+                display:none;
+                /*container class명에 none으로 보이지 않게 한다*/
+            }
+        </style>
+    </head>
+    <body>
+        <div class="game_container">
+            １．새해를 맞이하여 복 많이 받으라는 일본어로 올바른 것은?<br>
+            <span class="answerCheck">&nbsp;&nbsp;① あけおめ<input type="radio" name="question1" id="correct1" style="margin:10px;width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;② おはよう<input type="radio" name="question1" style="margin:10px;width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;③ よろしく<input type="radio" name="question1" style="margin:10px;width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;④ またあよう<input type="radio" name="question1" style="margin:10px;width:20px;height:20px;border:1px;"></span><br>
+            <div><button onclick="location.href='alpha_ver1227.html'">메인메뉴</button> <button class="next" onclick="next(1)">다음</button></div>
+        </div>
+        <div class="game_container">
+            ２．다음 중 자동사가 아닌 것은?<br>
+            <span class="answerCheck">&nbsp;&nbsp;① 見つかる<input type="radio" name="question2" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;② 建つ<input type="radio" name="question2" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;③ 焼ける<input type="radio" name="question2" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;④ 捕まえる<input type="radio" name="question2" id="correct2" style="width:20px;height:20px;border:1px;"></span><br>
+            <div><button onclick="location.href='alpha_ver1227.html'">메인메뉴</button> <button class="next" onclick="next(2)">다음</button></div>
+        </div>
+        <div class="game_container">
+            ３．다음 중 타동사가 아닌 것은?<br>
+            <span class="answerCheck">&nbsp;&nbsp;① 切る<input type="radio" name="question3" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;② 直る<input type="radio" name="question3" id="correct3" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;③ 割る<input type="radio" name="question3" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;④ 沸かす<input type="radio" name="question3" style="width:20px;height:20px;border:1px;"></span><br>
+            <div><button onclick="location.href='alpha_ver1227.html'">메인메뉴</button> <button class="next" onclick="next(3)">다음</button></div>
+        </div>
+        <div class="game_container">
+            ４．다음 문장 빈칸에 들어갈 적절한 답을 고르시오.<br>
+            北野さんのお誕生日にこのスカーフを（　   ）つもりです。<br>
+            <span class="answerCheck">&nbsp;&nbsp;① いただく<input type="radio" name="question4" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;② くれる<input type="radio" name="question4" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;③ もらう<input type="radio" name="question4" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;④ あげる<input type="radio" name="question4" id="correct4" style="width:20px;height:20px;border:1px;"></span><br>
+            <div><button onclick="location.href='alpha_ver1227.html'">메인메뉴</button> <button class="next" onclick="next(4)">다음</button></div>
+        </div>
+        <div class="game_container">
+            ５．다음 조건표현 중 틀린 표현은?<br>
+            <span class="answerCheck">&nbsp;&nbsp;① 見れば<input type="radio" name="question5" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;② 寒かったら<input type="radio" name="question5" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;③ 暇なと<input type="radio" name="question5" id="correct5" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;④ 学生なら<input type="radio" name="question5" style="width:20px;height:20px;border:1px;"></span><br>
+            <div><button onclick="location.href='alpha_ver1227.html'">메인메뉴</button> <button class="next" onclick="next(5)">다음</button></div>
+        </div>
+        <div class="game_container">
+            ６．다음 문장 빈칸에 들어갈 적절한 답을 고르시오.<br>
+            大好きな祖母には、いつまでも元気で長生き（　  ）。<br>
+            <span class="answerCheck">&nbsp;&nbsp;① していたい<input type="radio" name="question6" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;② したがる<input type="radio" name="question6" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;③ してほしい<input type="radio" name="question6" id="correct6" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;④ したがっている<input type="radio" name="question6" style="width:20px;height:20px;border:1px;"></span><br>
+            <div><button onclick="location.href='alpha_ver1227.html'">메인메뉴</button> <button class="next" onclick="next(6)">다음</button></div>
+        </div>
+        <div class="game_container">
+            ７．다음 한자의 가타가 옳은 표기는? : 核心<br>
+            <span class="answerCheck">&nbsp;&nbsp;① かくしん<input type="radio" name="question7" id="correct7" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;② がくしん<input type="radio" name="question7" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;③ きんしん<input type="radio" name="question7" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;④ ぎんしん<input type="radio" name="question7" style="width:20px;height:20px;border:1px;"></span><br>
+            <div><button onclick="location.href='alpha_ver1227.html'">메인메뉴</button> <button class="next" onclick="next(7)">다음</button></div>
+        </div>
+        <div class="game_container">
+            ８．다음 가타의 한자가 옳은 표기는? : 代用<br>
+            <span class="answerCheck">&nbsp;&nbsp;① たいよう<input type="radio" name="question8" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;② だいよう<input type="radio" name="question8" id="correct8" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;③ たいよ<input type="radio" name="question8" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;④ だいよ<input type="radio" name="question8" style="width:20px;height:20px;border:1px;"></span><br>
+            <div><button onclick="location.href='alpha_ver1227.html'">메인메뉴</button> <button class="next" onclick="next(8)">다음</button></div>
+        </div>
+        <div class="game_container">
+            ９．맥도날드에서 싼 커피를 시켜놓고 하룻밤을 보내는 사람을 일컬는 말은?<br>
+            <span class="answerCheck">&nbsp;&nbsp;① マクド泥棒<input type="radio" name="question9" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;② マクド遊民<input type="radio" name="question9" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;③ マクド市民<input type="radio" name="question9" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;④ マクド難民<input type="radio" name="question9" id="correct9" style="width:20px;height:20px;border:1px;"></span><br>
+            <div><button onclick="location.href='alpha_ver1227.html'">메인메뉴</button> <button class="next" onclick="next(9)">다음</button></div>
+        </div>
+        <div class="game_container">
+            １０．다음 단어의 뜻으로 올바른 것은? : 腹が立つ<br>
+            <span class="answerCheck">&nbsp;&nbsp;① 배가 아프다<input type="radio" name="question10" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;② 목소리를 내다<input type="radio" name="question10" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;③ 화가 나다<input type="radio" name="question10" id="correct10" style="width:20px;height:20px;border:1px;"></span><br>
+            <span class="answerCheck">&nbsp;&nbsp;④ 입장을 내세우다<input type="radio" name="question10" style="width:20px;height:20px;border:1px;"></span><br>
+            <div><button onclick="location.href='alpha_ver1227.html'">메인메뉴</button> <button class="next" onclick="next(10)">다음</button></div>
+        </div>
+        <div class="game_container">
+            !!~수고하셨습니다~!!<br>
+            <div id="scoreGet"></div>
+            <button class="next" onclick="result()">終わり</button><button onclick="location.href='alpha_ver1227.html'">메인메뉴</button>
+        </div>
+        
+
+        <script>
+            // 첫 문제 블록을 제외한 나머지 블록을 가리게 하기
+            document.getElementsByClassName('game_container')[0].style.display="block";
+            var score = 0;
+            // 다음 페이지로 넘어가는 선언문
+            function next(id){
+                var selected = false;
+                var radios = document.getElementsByName('question'+id);
+                for (var radio of radios){
+                    if(radio.type == 'radio' && radio.checked){
+                        selected = true;
+                        if(document.getElementById('correct'+id).checked==true){
+                            score++;
+                        }
+                        document.getElementsByClassName('game_container')[id-1].style.display="none";
+                        document.getElementsByClassName('game_container')[id].style.display="block";
+                    }
+                }
+                if(!selected){
+                    alert("정답은 반드시 체크되어야만 합니다!!!")
+                }
+            }
+            document.getElementById("scoreGet").innerHTML=score;
+            // 마지막 결과를 받는 함수
+            // export{result}; // 결과를 수출
+
+            // 결과 창으로 이동하는 함수
+            function result(){
+                location.href="result.html";
+            }
+        </script>
+    </body>
+</html>

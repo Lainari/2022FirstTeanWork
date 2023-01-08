@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> <!--글자를 UTF-8 버전으로 인코딩, 글자 깨짐 방지-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--브라우저 너비를 장치 너비에 맞추어 표시함-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--최신모드로 지정된 DOCTYPE에 상관없이 IE8 이상 버전에서 항상 최신 표준 모드로 렌더링화-->
+
+        <title>MainPage</title>
+
+        <link rel="stylesheet" href="Main_style.css">
+        <!--css를 링크로 통한 연결-->
+    </head>
+
+    <body>
+        <div class="mainHeading">일본어 퀴즈퀴즈</div>
+        <article> <!--article 요소는 문서, 페이지, 애플리케이션, 또는 사이트 안에서
+            독립적으로 구분해 배포하거나 재사용할 수 있는 구획, div 자손을 넣을 수 있음-->
+            <div class = "container">
+                <form class="login_form">
+                <!--form 요소는 정보를 제출하기 위한 대화형 컨트롤을 포함하는 문서 구획-->
+                    <button id="LOGIN_BTN" class = "login_btn" type="button">로그인</button>
+                    <input id="LOGIN_ID" class = "login_text" type="text" name="id" placeholder="사용자 이름">
+                    <input  id="LOGIN_PW" class = "login_text" type="password" name="id" placeholder="비밀번호">
+                    <div class="signup">아직 계정이 없으시면 <a class = "login_bottom" href="signup.html" >회원가입</a>을 먼저하세요! </div>
+                </form>
+            </div>
+        </article>
+
+        <script>
+            //const 선언은 블록 범위의 상수를 선언
+            const loginBtn = document.getElementById("LOGIN_BTN");
+            // Document 객체는 웹 페이지 그 자체를 의미함
+            // 웹 페이지에 존재하는 HTML 요소에 접근하고자 할 때는
+            // 반드시 Document 객체부터 시작해야 합니다.
+            // + getElementByID : id를 통해 객체를 불러오는 것.
+
+            // 로그인 성공시 메인 PAGE로 이동
+            function moveToMain(){
+                const loginId = document.getElementById("LOGIN_ID").value;
+                const loginPw = document.getElementById("LOGIN_PW").value;
+                if(loginId == '' && loginPw == ''){
+                    alert("로그인 정보를 입력해주세요!!")
+                    return;
+                }
+                else if(loginId == 'admin'&& loginPw == '1234'){
+                    location.replace("alpha_ver1227.html");
+                }
+                else{
+                    alert("아이디 또는 비밀번호가 틀리셨습니다.")
+                    return;
+                }
+                    
+            }
+            // id에서 Event를 불러온다. keyup은 마우스를 올렸을때, color는 해당 id 객체를 올렸을 때 반응하는 함수다
+            // click은 클릭했을 때, moveTomain은 해당 id객체를 클릭했을 때 반응하는 함수
+            loginBtn.addEventListener('click',moveToMain);
+        </script>
+    </body>
+</html>

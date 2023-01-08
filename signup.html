@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>회원가입</title>
+        <link rel="stylesheet" href="Main_style.css">
+    </head>
+    <body>
+        <div class="signupHeading">회원가입</div>
+        <div class="container">
+            <form name="login_form" class="signup_form" method="get">
+                <!--form 요소는 정보를 제출하기 위한 대화형 컨트롤을 포함하는 문서 구획-->
+                <div class="signup_box">아이디 : <input type="text" class="signup_text" id="id_val"placeholder="아이디" size="15">
+                    <!-- <button id="signupbtn" class = "idCheck_btn" type="button">중복확인</button> -->
+                </div>
+                <div class="signup_box">비밀번호 : <input type="password" class="signup_text" id="pw_val" name="pw_val" placeholder="비밀번호" size="15"><br></div>
+                <div class="signup_box">비밀번호 재확인 : <input type="password" class="signup_text" id="pw_check_val" name="pw_check_val" onkeyup="pwCheck()" placeholder="비밀번호 재입력" size="15"><br></div>
+                <label><div id="checkPwd" style="display:none; color:red;">동일한 암호를 입력하세요.</div></label>
+                <div class="signup_box">닉네임 : <input type="text" class="signup_text" id="nickname_val"placeholder="닉네임" size="15"></div>
+                <div class="signup_btnForm">
+                    <input type="button" class="signup_btn" onclick="signup()" value="회원가입" style='font-size:20px'>
+                    <button type="button" class="signupGoToMain_btn" onclick="location.href='login_alpha1231.html'" style='font-size:20px'>메인메뉴</button>
+                </div>
+            </form>
+        </div>
+
+        <script type="text/javascript">
+            function signup(){
+                if(!document.login_form.id_val.value || !document.login_form.pw_val.value){
+                    alert("아이디 또는 비밀번호를 미입력하셨습니다!!")
+                    return;
+                }
+                else{
+                    alert("회원 가입이 완료되었습니다.")
+                    location.href = "login_alpha1231.html";
+                }
+            }
+            function pwCheck(){
+                if(document.getElementById('pw_val').value !='' && document.getElementById('pw_check_val').value!=''){
+                    if(document.getElementById('pw_val').value != document.getElementById('pw_check_val').value){
+                        document.getElementById('checkPwd').style.display="block";
+                    }
+                    else{
+                        document.getElementById('checkPwd').style.display="none";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
